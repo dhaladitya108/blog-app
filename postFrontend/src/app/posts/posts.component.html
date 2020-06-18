@@ -2,18 +2,36 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h2>post List</h2>
       <div class="rows">
-        <div class="col-md-12 text-right">
+        <div class="col-md-12 text-right my-3">
           <a class="btn btn-success" [routerLink]="'/add'">Add post</a>
         </div>
       </div>
-      <div class="card mt-3" *ngFor="let post of posts">
-        <div class="card-header">
-          {{post.title}}
+      <div class="container section">
+        <h2>List Post</h2>
+        <div class="card bg-light mt-4">
+          <div class="card-header">
+            Some Title
+          </div>
+          <div class="card-body">
+            Some long description .....
+          </div>
         </div>
-        <div class="card-body">
-          {{post.description}}
+        <div class="card bg-light mt-4">
+          <div class="card-header">
+            Some Other Title
+          </div>
+          <div class="card-body">
+            Some othter long description .....
+          </div>
+        </div>
+        <div class="card bg-light mt-4" *ngFor="let post of posts">
+          <div class="card-header">
+            {{ post.title }}
+          </div>
+          <div class="card-body">
+            {{ post.description }}
+          </div>
         </div>
       </div>
     </div>

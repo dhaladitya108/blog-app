@@ -1,0 +1,17 @@
+.section {
+  padding: 40px 50px;
+  box-sizing: border-box;
+  width: 700px;
+  background-color: rgb(190, 196, 197);
+  border-radius: 15px;
+  box-shadow: 1px 1px 14px -4px #000000;
+}
+
+.section h2 {
+  padding: 10px 0;
+  text-align: center;
+  margin-bottom: 40px;
+  background-image: linear-gradient(to left, #0072ff, #8811c5);
+  color: #fff;
+  font-weight: bold;
+}
