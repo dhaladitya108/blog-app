@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Register Now</h2>
+      <div class="alert alert-success" *ngIf="isRegister">{{successMessage}}</div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="fullName" [(ngModel)]="fullName">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="email" name="email" [(ngModel)]="email">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="password" name="password" [(ngModel)]="password">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success" (click)="onCreateUser()">Register</button>
+      </div>
+    </div>
+  </div>
+</div>
