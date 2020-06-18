@@ -6,3 +6,25 @@ body {
     rgb(15, 15, 228)
   );
 }
+.section-g {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 1px 1px 11px -2px #000000;
+  margin: 50px auto;
+  padding: 25px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+}
+
+.section-g h2 {
+  width: 400px;
+  text-align: center;
+  height: 80px;
+  background-image: linear-gradient(to left, #0072ff, #8811c5);
+  color: #fff;
+  font-weight: bold;
+  line-height: 80px;
+}

@@ -1,7 +1,8 @@
 .section {
+  margin-bottom: 40px;
   padding: 40px 50px;
   box-sizing: border-box;
-  width: 700px;
+  width: 450px;
   background-color: rgb(190, 196, 197);
   border-radius: 15px;
   box-shadow: 1px 1px 14px -4px #000000;

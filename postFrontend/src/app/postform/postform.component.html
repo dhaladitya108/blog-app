@@ -2,14 +2,15 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h2>Add Post</h2>
-      <form>
+      <form class="section-g">
+        <h2>Add Post</h2>
         <div class="alert alert-success" *ngIf="postSaved"></div>
         <div class="form-group">
-          <input type="text" class="form-control" name="postTitle" [(ngModel)]="postTitle" />
+          <input type="text" class="form-control" name="postTitle" placeholder="title" [(ngModel)]="postTitle" />
         </div>
         <div class="form-group">
-          <textarea class="form-control" name="postDescription" [(ngModel)]="postDescription"></textarea>
+          <textarea class="form-control" name="postDescription" placeholder="description"
+            [(ngModel)]="postDescription"></textarea>
         </div>
         <div class="form-group">
           <button class="btn btn-info" (click)="onCreatePost()">Save Post</button>

@@ -40,4 +40,34 @@ router.post("/save", checkAuthentication, (req, res) => {
   });
 });
 
+router.post("/delete", (rq, rs) => {
+  const title = rq.body.title;
+  let query = { title: title };
+  mongo.connect(url, (err, db) => {
+    const post_db = db.db("postdb");
+    post_db.collection("posts").deleteOne(query, (err, rslt) => {
+      if (err) throw err;
+      rs.status(200).json({
+        message: "data fetched",
+        posts: rslt,
+      });
+    });
+  });
+});
+
+router.post("/find", (rq, rs) => {
+  const title = rq.body.title;
+  let query = { title: title };
+  mongo.connect(url, (err, db) => {
+    const post_db = db.db("postdb");
+    post_db.collection("posts").findOne(query, (err, rslt) => {
+      if (err) throw err;
+      rs.status(200).json({
+        message: "data fetched",
+        posts: rslt,
+      });
+    });
+  });
+});
+
 module.exports = router;
